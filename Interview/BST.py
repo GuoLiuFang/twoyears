@@ -109,7 +109,8 @@ class BSTNode(object):
     @staticmethod        
     def hierarchicalTraverse(node):
         q = Queue.Queue()
-        q.put(node)
+        if node is not None:
+            q.put(node)
         while not q.empty():
             p = q.get()
             print(p.val)
